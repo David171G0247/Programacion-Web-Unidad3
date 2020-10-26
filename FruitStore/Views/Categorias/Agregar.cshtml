@@ -1,0 +1,23 @@
+﻿@model FruitStore.Models.Categorias
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<form action="~/Categorias/Agregar" method="post">
+    <div>
+        <h1>Agregar Categoría</h1>
+
+        <label>Nombre:</label>
+        <input type="text" name="Nombre" required="required" value="@(Model!=null? Model.Nombre:"")"/>
+         
+        <div class="botones">
+            <p id="error">
+                @Html.ValidationSummary()
+            </p>
+            <input type="submit" value="Agregar" id="btnAgregar" />.
+            <a href="~/Categorias">
+                <input type="button" value="Cancelar" id="btnCancelar" formnovalidate="formnovalidate" />
+            </a>
+        </div>
+    </div>
+</form>

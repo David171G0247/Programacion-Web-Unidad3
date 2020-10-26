@@ -1,0 +1,24 @@
+﻿@inject FruitStore.Services.CategoriasService Servicio
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>FruitStore - La mejor fruteria de la Web</title>
+    <link href="~/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header></header>
+    <nav>
+        <a href="~/Home">Principal</a>
+        @foreach (var item in Servicio.Categorias)
+        {
+            <a href="~/@item.Nombre">@item.Nombre</a>
+        }
+
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<FruitStore.Models.Categorias>
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<h1>Administrar Categorias</h1>
+
+<section class="listado">
+
+    <a class="mark" href="~/Categorias/Agregar">
+        <h1>Nueva Categoria...</h1>
+        <div class="botones">
+            <img src="~/images/add.png" />
+        </div>
+    </a>
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <h1>@item.Nombre</h1>
+
+            <div class="botones">
+                <a href="~/Categorias/Editar/@item.Id" class="btnEditar"></a>
+                <a href="~/Categorias/Eliminar/@item.Id" class="btnBorrar"></a>
+            </div>
+        </div>
+    }
+   
+</section>

@@ -1,0 +1,50 @@
+﻿@model FruitStore.Models.ViewModels.ProductosIndexViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<h1>Administrar Productos</h1>
+
+<section class="listado">
+    <form method="post" action="~/Productos/Index">
+        <select asp-for="IdCategoria" asp-items="@(new SelectList(Model.Categorias, "Id", "Nombre"))"
+                id="ddlCategorias" style="width:100%;margin: 10px 0" onchange="this.form.submit()">
+            <option selected="selected" value="">Ver todos los productos</option>
+        </select>
+    </form>
+
+    <a id="lnkNueva" class="mark" href="~/Productos/Agregar">
+        <h1>Nuevo Producto...</h1>
+        <h2></h2>
+        <h2></h2>
+        <h2></h2>
+        <div class="image">
+            <img src="../images/addb.png" />
+        </div>
+        <h2></h2>
+        <h2></h2>
+        <div class="botones">
+            <img src="../images/add.png" />
+        </div>
+    </a>
+
+    @foreach (var item in Model.Productos)
+    {
+        <div class="card">
+            <h1>@item.Nombre</h1>
+            <h2>Tipo: @item.IdCategoriaNavigation.Nombre</h2>
+            <h2>Unidad de Medida: @item.UnidadMedida</h2>
+            <h2>Precio: @item.Precio.Value.ToString("$ 00.00")</h2>
+            <h2 title="@item.Descripcion">Descripción: @(item.Descripcion.Length>50?item.Descripcion.Substring(0,50)+"...":item.Descripcion)</h2>
+            <div class="image">
+                <img src="../img_frutas/@(item.Id).jpg?v=1" />
+            </div>
+            <div class="botones">
+                <a href="~/Productos/Editar/@(item.Id)" class="btnEditar"></a>
+                <a href="~/Productos/Eliminar/@(item.Id)" class="btnBorrar"></a>
+            </div>
+        </div>
+    }
+
+</section>

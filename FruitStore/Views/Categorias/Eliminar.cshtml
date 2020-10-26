@@ -1,0 +1,24 @@
+﻿@model FruitStore.Models.Categorias
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<form method="post" action="~/Categorias/Eliminar">
+    <div>
+        <h1>Eliminar Categoría</h1>
+
+        <input type="hidden" name="id" value="@Model.Id"/>
+        
+        <p>¿Está seguro de eliminar la categoría "<span id="nombreCategoria">@Model.Nombre</span>"?</p>
+
+        <div class="botones">
+            <p id="error">
+                @Html.ValidationSummary()
+            </p>
+            <input type="submit" value="Si" id="btnSi" />
+            <a href="~/Categorias">
+                <input type="button" value="No" id="btnNo" formnovalidate="formnovalidate" />
+            </a>
+        </div>
+    </div>
+</form>

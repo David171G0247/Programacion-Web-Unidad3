@@ -1,0 +1,279 @@
+﻿body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+header {
+    height: 150px;
+    background: url(images/frutas_banner1.jpg) no-repeat, url(images/logo.png) center right no-repeat;
+    margin: 0 20px 0 0;
+}
+
+nav {
+    background: #55ab00;
+    min-height: 30px;
+    padding: 5px 0px;
+}
+
+    nav a {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        line-height: 30px;
+        margin: 0 10px;
+        font-family: Arial;
+        font-weight: bold;
+    }
+
+main {
+    display: block;
+    padding: 20px;
+}
+
+    main form img {
+        max-width: 80%;
+        max-height: 500px;
+        display: block;
+        margin: 20px auto;
+    }
+
+    main h1 {
+        text-align: center;
+    }
+
+footer {
+    background: #55ab00;
+    height: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.productos a {
+    display: block;
+    width: calc(25% - 10px);
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    color: orangered;
+    margin: 0 10px 30px 0;
+}
+
+    .productos a div {
+        height: 140px;
+    }
+
+    .productos a img {
+        max-height: 140px;
+        max-width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .productos a h3 {
+        color: black;
+        margin: 0;
+    }
+
+
+.datosproductos img {
+    display: block;
+    float: left;
+    width: 30%;
+}
+
+.datosproductos p {
+    display: block;
+    width: 60%;
+    float: right;
+    margin: 0 10px;
+}
+
+    .datosproductos p label {
+        display: inline-block;
+        width: 25%;
+        font-weight: bold;
+    }
+
+
+        .datosproductos p label:nth-child(2n) {
+            display: inline-block;
+            width: 70%;
+            font-weight: normal;
+        }
+
+.admin {
+    color: yellow;
+}
+
+
+.listado a, .listado .card {
+    border: 2px solid rgb(85,171,0);
+    width: 300px;
+    display: block;
+    margin: 0 5px 5px 0;
+    float: left;
+    text-decoration: none;
+    position: relative;
+}
+
+
+
+.listado h1, .listado h2 {
+    margin: 0;
+    text-align: left;
+    height: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 45px 0 5px;
+    line-height: 25px;
+    overflow: hidden;
+    color: white;
+    background: linear-gradient(to bottom, #55ab00 1%,#458a01 50%, #55ab00 100%);
+}
+
+.listado .mark h1 {
+    color: yellow;
+}
+
+.listado h2 {
+    background: none;
+    color: darkgray;
+    font-weight: normal;
+    font-size: 15px;
+    height: 15px;
+    line-height: 15px;
+}
+
+    .listado h2[title] {
+        height: 30px;
+    }
+
+.listado .image {
+    width: 284px;
+    height: 94px;
+    margin: 5px;
+    padding: 3px;
+}
+
+.listado img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.listado .botones {
+    width: 50px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+    .listado .botones input, .listado .botones a {
+        display: block;
+        float: left;
+        width: 21px;
+        height: 21px;
+        margin: 2px;
+        border: 0;
+        background-size: contain;
+    }
+
+.btnEditar {
+    background-image: url(images/editb.png);
+}
+
+.btnBorrar {
+    background-image: url(images/deleteb.png);
+}
+
+/*.1*/
+.modal {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+form > div {
+    width: 500px;
+    background-color: white;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid gray;
+    overflow: hidden;
+}
+
+.modal form > div {
+    width: 500px;
+    background-color: white;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid gray;
+    outline: 10px solid rgba(85, 171, 0, 0.30);
+    overflow: hidden;
+}
+
+
+form input[type=submit], input[type=button] {
+    display: block;
+    float: left;
+    width: 48%;
+    height: 30px;
+    margin: 0 1%;
+    background-color: #55ab00;
+    color: yellow;
+}
+
+form h1 {
+    margin: 0 0 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+
+form div > label {
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    box-sizing: border-box;
+    width: 29%;
+    margin: 0 1% 5px 0;
+    text-transform: uppercase;
+    font-size: 10pt;
+}
+
+form div > input, form div > select, form div > textarea {
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 0 5px 0;
+}
+
+form div > textarea {
+    width: 100%;
+    resize: none;
+    height: 50px;
+}
+
+form > div > img {
+    clear: both;
+    max-height: 100px;
+    display: block;
+    margin: auto;
+}
+
+#error, .error {
+    text-align: center;
+    color: red;
+    font-size: smaller;
+    margin: 5px 0;
+}

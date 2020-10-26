@@ -1,0 +1,26 @@
+﻿@model FruitStore.Models.Productos
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<form method="post" action="~/Productos/Eliminar">
+    <div>
+        <h1>Eliminar Producto</h1>
+
+        <input type="hidden" id="id" asp-for="Id" />
+
+        <p>¿Está seguro de eliminar el producto  "<span id="nombreCategoria">@Model.Nombre</span>"?</p>
+
+        <div class="botones">
+            <p id="error">
+                @Html.ValidationSummary()
+            </p>
+            <input type="submit" value="Si" id="btnSi" />
+            <a href="~/Productos">
+                <input type="button" value="No" id="btnNo" formnovalidate="formnovalidate" />
+            </a>
+        </div>
+    </div>
+</form>
+

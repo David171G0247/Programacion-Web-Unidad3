@@ -1,0 +1,25 @@
+﻿@model FruitStore.Models.Categorias
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<form action="~/Categorias/Editar" method="post">
+    <div>
+        <h1>Editar Categoría</h1>
+
+        <input type="hidden" name="id" value="@Model.Id" />
+
+        <label>Nombre:</label>
+        <input type="text" name="Nombre" required="required" value="@Model.Nombre" />
+
+        <div class="botones">
+            <p id="error">
+                @Html.ValidationSummary()
+            </p>
+            <input type="submit" value="Guardar" id="btnGuardar" />
+            <a href="~/Categorias">
+                <input type="button" value="Cancelar" id="btnCancelar" formnovalidate="formnovalidate" />
+            </a>
+        </div>
+    </div>
+</form>

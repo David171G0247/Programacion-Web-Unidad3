@@ -1,0 +1,24 @@
+﻿@model FruitStore.Models.ViewModels.CategoriaViewModel
+@{
+    Layout = "_Layout";
+}
+
+<h1 id="nombreCategoria">@Model.Nombre</h1>
+
+
+<div class="productos">
+    @foreach (var item in Model.Productos)
+    {
+        <a href="~/detalles/@Model.Nombre/@item.Nombre.Replace(" ","-")">
+            <div>
+                <img src="~/img_frutas/@(item.Id).jpg" />
+            </div>
+            <h2>@item.Nombre</h2>
+            <h3>@item.Precio.Value.ToString("$ 0.00")</h3>
+        </a>
+    }
+    
+</div>
+
+
+

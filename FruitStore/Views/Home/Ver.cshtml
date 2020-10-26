@@ -1,0 +1,32 @@
+﻿@model FruitStore.Models.Productos
+@{
+    Layout = "_Layout";
+}
+
+<div class="datosproductos">
+    <h1 id="nombre">@Model.Nombre </h1>
+
+    <img src="~/img_frutas/@(Model.Id).jpg" id="imagen" />
+    <p>
+        <label>Precio:</label>
+        <label id="precio">@Model.Precio.Value.ToString("$ 0.00")</label>
+    </p>
+    <p>
+        <label>Categoria:</label>
+        <label id="categoria">@Model.IdCategoriaNavigation.Nombre</label>
+    </p>
+    <p>
+        <label>Unidad de Medida:</label>
+        <label id="unidadmedida">@Model.UnidadMedida</label>
+    </p>
+    <p>
+        <label>Descripción:</label>
+        <label id="descripcion">@Model.Descripcion</label>
+    </p>
+
+    <p style="text-align:center; margin:20px 0">
+        <a href="javascript:window.history.back()">Regresar</a>
+    </p>
+
+</div>
+
