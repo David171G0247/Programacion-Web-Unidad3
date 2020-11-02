@@ -1,0 +1,23 @@
+﻿@model ZooPlanet.Models.Especies
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+}
+
+<h1>Eliminar Especies</h1>
+
+<form method="post" action="~/Admin/Administrador/Eliminar">
+    <label>Nombre:</label>
+    <input type="text" readonly="readonly" asp-for="Especie" />
+    <label>Clase:</label>
+    <input type="text" readonly="readonly" asp-for="IdClaseNavigation.Nombre" />
+    <input type="hidden" asp-for="Id" />
+    <p class="error">
+        @Html.ValidationSummary()
+    </p>
+
+    <input type="submit" value="Eliminar" />
+    <a href="~/Admin/Administrador">
+        <input type="button" value="Cancelar" />
+    </a>
+</form>

@@ -1,0 +1,38 @@
+﻿@inject  ZooPlanet.Services.MenuServices menu
+<html>
+<head>
+    <title>ZooPlanet</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+    <link href="~/font-awesome.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="~/Home"><b>Zoo</b>Planet</a></h1>
+        <nav>
+            <ul>
+                <li><a href="~/Home">Home</a></li>
+                <li>
+                    <a href="#">Clasificación</a>
+                    <ul>
+                        @foreach (var m in menu.Clases)
+                        {
+                        <li><a href="~/Home/Clase/@m.Nombre">@m.Nombre</a></li>
+                        }
+                    </ul>
+                </li>
+                <li><a href="~/Admin">Administrador</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        @RenderBody()
+
+
+    </main>
+    <footer>Programación Web. Unidad 3.</footer>
+</body>
+</html>

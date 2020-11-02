@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FruitStore", "FruitStore\FruitStore.csproj", "{86C50B70-1198-4931-A55B-4775942BF008}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FruitStore", "FruitStore\FruitStore.csproj", "{86C50B70-1198-4931-A55B-4775942BF008}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooPlanet", "ZooPlanet\ZooPlanet.csproj", "{F344081D-721E-4CA4-9E55-CEB5C6B1462A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{86C50B70-1198-4931-A55B-4775942BF008}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86C50B70-1198-4931-A55B-4775942BF008}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86C50B70-1198-4931-A55B-4775942BF008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F344081D-721E-4CA4-9E55-CEB5C6B1462A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F344081D-721E-4CA4-9E55-CEB5C6B1462A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F344081D-721E-4CA4-9E55-CEB5C6B1462A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F344081D-721E-4CA4-9E55-CEB5C6B1462A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
